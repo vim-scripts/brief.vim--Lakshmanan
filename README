@@ -1,0 +1,154 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=265
+
+The brief.vim Vim plugin emulates the brief editor key bindings and behavior
+in Vim.
+
+The brief editor has only one mode - insert-mode. This plugin uses the Vim
+"insertmode" option to emulate the brief insert mode. This plugin will automatically
+start the insert mode.  To properly use this plugin, you have to be in
+insertmode always.  If you press escape, Vim will not go to the normal mode.
+If you want to use any of the normal commands, press <C-o> and then the normal
+mode command. 
+
+This plugin uses the CTRL and ALT keys for the mappings. Before
+using this plugin, make sure that the ALT and CTRL keys work in your Vim
+installation.
+
+The following list of brief like key-mappings are provided:
+
+Cursor Movement Keys:
+
+<Up>         - Move cursor up one line
+<Down>       - Move cursor down one line
+<C-Left>     - Goto beginning of previous word
+<C-Right>    - Goto beginning of next word
+<Home>       - Home key.  If you press once, cursor will move to the first
+               column in the current line.  If you press twice, cursor will
+               move to the first column in the first line in the current
+               page.  If you press thrice, cursor will be positioned at the
+               top of the file.
+<End>        - End key. If you press once, cursor will move to the last
+               column in the current line.  If you press twice, cursor will
+               move to the last column in the last line in the current page.
+               If you press thrice, cursor will be positioned at the end of
+               the file.
+<C-PageUp>   - Goto-beginning of file
+<C-PageDown> - goto-end of file
+<C-Home>     - Beginning-of-window
+<C-End>      - End-of-window
+<C-d>        - Scroll line down
+<C-e>        - Scroll line up
+<A-Home>     - Move the cursor to the first character on screen
+<A-End>      - Move the cursor to the last character on screen
+<C-b>        - Move the current line to the bottom of the window
+<C-c>        - Move the current line to the center of the window
+<C-t>        - Move the current line to the top of the window
+
+Editing Keys:
+
+<C-CR>       - Open a new line below the current line and goto that line
+<S-CR>       - open a new line below the current line, cursor stays in the
+               current line
+<A-i>        - Toggle insert mode
+<A-k>        - Delete from the cursor position to the end of line
+<C-k>        - Delete from the cursor position to the start of line
+<A-d>        - Delete the current line
+<kPlus>      - Copy line or mark to scrap buffer.  Vim register 'a' is used
+               as the scrap  buffer.
+<kMinus>     - Cut line or mark to scrap buffer.  Vim register 'a' is used
+               as the scrap buffer.
+<Ins>        - Paste scrab buffer contents to current cursor position.  Vim
+               register 'a' is used as the scrap buffer
+<C-Ins>      - Copy marked text to system clipboard.  If no mark, copy
+               current line
+<S-Ins>      - Paste the system clipboard contents to current cursor
+<S-Del>      - Cut the marked text to system clipboard. If no mark, cut the
+               current line
+<C-Del>      - Remove the marked text
+<C-v>        - Clipboard paste
+<A-g>        - Goto line
+<C-BS>       - Delete the previous word
+<A-BS>       - Delete the next word
+<A-/>        - Complete a partially typed word
+<A-q>        - Quote the next character
+
+Delete Keys:
+
+<A-u>          :
+<kMultiply>  : Undo last operation.  Either keypad * key or <A-u> can be used.
+<A-y>          : Restore line
+<C-y>          : Redo the previously undid commands
+
+Search and Replace Commands:
+
+<C-f>          :
+<F5>          :
+<A-s>         : String search
+<S-F5>       : search again
+<A-F5>       : Reverse search
+<F6>          : Search and replace from the current cursor position
+<A-t>         : Search and replace the current word from the current cursor position
+<S-F6>       : Repeat last search and replace
+<C-F5>       : toggle case sensitivity of search commands.
+
+Buffer Commands:
+
+<A-e>        - Open file
+<A-x>        - Exit
+<A-r>        - Read file
+<A-w>        - Save the current file
+<A-o>        - Save the current file in a different file name
+<A-n>        - Select next buffer from the buffer list
+<A-->        -
+<A-p>        - Select previous buffer from the buffer list
+<C-->        -
+<C-kMinus>   - Delete current buffer from buffer list
+<A-b>        - Display buffer list
+<A-f>        - Display buffer information
+
+Compiler related commands:
+
+<A-F10>      - Compile current buffer
+<C-n>        - Jump to the next error
+<C-l>        - pJump to the next previous error
+<C-p>        - View compiler output
+
+Mark commands:
+
+<A-m>        - Toggle standard text marking mode
+<A-l>        - Toggle line marking mode
+<A-c>        - 
+<A-a>        - Toggle column marking mode
+<A-h>        - Mark current word
+
+Misc commands:
+
+<A-v>        - Show version
+<C-Up>
+<C-Down>     - Goto next/previous function
+<A-z>        - Start a shell
+<A-F1>       - Search for a keyword in online help
+
+Bookmark:
+
+<A-0>        - Mark bookmark 0
+<A-1>        - Mark bookmark 1
+<A-2>        - Mark bookmark 2
+<A-3>        - Mark bookmark 3
+<A-4>        - Mark bookmark 4
+<A-5>        - Mark bookmark 5
+<A-6>        - Mark bookmark 6
+<A-7>        - Mark bookmark 7
+<A-8>        - Mark bookmark 8
+<A-9>        - Mark bookmark 9
+<A-j>        - Jump to a bookmark
+
+Windows Commands:
+
+<F3>         - Split window
+<F4>         - Delete window
+<A-F2>       - Zoom window
+<A-Down>     - Goto the window below the current window
+<A-Up>       - Goto the window above the current window
+
+
